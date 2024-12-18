@@ -3,46 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EDDCCAFA-25A3-4063-8232-AA5E17A244A5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{792A1B6A-1F6B-4CDF-8482-ACF61B23E066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Core", "src\PokemonSharp.Core\PokemonSharp.Core.csproj", "{005B2A32-7AAB-4539-814E-92BB77F9172C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Game", "src\PokemonSharp.Game\PokemonSharp.Game.csproj", "{D525F690-29FC-4526-A9FF-1D50D5040B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.UI", "src\PokemonSharp.UI\PokemonSharp.UI.csproj", "{636F6FE6-B50F-4075-A03C-012CF38116E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Domain", "src\PokemonSharp.Domain\PokemonSharp.Domain.csproj", "{36BD0B5B-149F-4B77-8DC7-DFAA34142F54}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Infra", "src\PokemonSharp.Infra\PokemonSharp.Infra.csproj", "{536BAAA4-B591-463E-A791-B6406E942C38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Domain", "src\PokemonSharp.Domain\PokemonSharp.Domain.csproj", "{A0B34602-B60F-489D-855D-821BF04E071E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D525F690-29FC-4526-A9FF-1D50D5040B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D525F690-29FC-4526-A9FF-1D50D5040B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D525F690-29FC-4526-A9FF-1D50D5040B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D525F690-29FC-4526-A9FF-1D50D5040B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B34602-B60F-489D-855D-821BF04E071E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B34602-B60F-489D-855D-821BF04E071E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B34602-B60F-489D-855D-821BF04E071E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B34602-B60F-489D-855D-821BF04E071E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{005B2A32-7AAB-4539-814E-92BB77F9172C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{005B2A32-7AAB-4539-814E-92BB77F9172C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{005B2A32-7AAB-4539-814E-92BB77F9172C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{005B2A32-7AAB-4539-814E-92BB77F9172C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{636F6FE6-B50F-4075-A03C-012CF38116E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{636F6FE6-B50F-4075-A03C-012CF38116E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{636F6FE6-B50F-4075-A03C-012CF38116E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{636F6FE6-B50F-4075-A03C-012CF38116E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36BD0B5B-149F-4B77-8DC7-DFAA34142F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36BD0B5B-149F-4B77-8DC7-DFAA34142F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36BD0B5B-149F-4B77-8DC7-DFAA34142F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36BD0B5B-149F-4B77-8DC7-DFAA34142F54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{536BAAA4-B591-463E-A791-B6406E942C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{536BAAA4-B591-463E-A791-B6406E942C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{536BAAA4-B591-463E-A791-B6406E942C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{536BAAA4-B591-463E-A791-B6406E942C38}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{005B2A32-7AAB-4539-814E-92BB77F9172C} = {EDDCCAFA-25A3-4063-8232-AA5E17A244A5}
-		{636F6FE6-B50F-4075-A03C-012CF38116E4} = {EDDCCAFA-25A3-4063-8232-AA5E17A244A5}
-		{36BD0B5B-149F-4B77-8DC7-DFAA34142F54} = {EDDCCAFA-25A3-4063-8232-AA5E17A244A5}
-		{536BAAA4-B591-463E-A791-B6406E942C38} = {EDDCCAFA-25A3-4063-8232-AA5E17A244A5}
+		{D525F690-29FC-4526-A9FF-1D50D5040B10} = {792A1B6A-1F6B-4CDF-8482-ACF61B23E066}
+		{A0B34602-B60F-489D-855D-821BF04E071E} = {792A1B6A-1F6B-4CDF-8482-ACF61B23E066}
 	EndGlobalSection
 EndGlobal
