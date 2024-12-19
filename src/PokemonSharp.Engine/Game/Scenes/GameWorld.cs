@@ -20,6 +20,7 @@ public class GameWorld(
     {
         var playerEntity = EntityManager.CreateEntity();
         EntityManager.AddComponent(playerEntity, new PositionComponent(100, 200));
+        EntityManager.AddComponent(playerEntity, new InputComponent());
         EntityManager.AddComponent(playerEntity,
             new SpriteComponent("Sprites/Trainer/trainer",
                 new Rectangle(0, 0, 48, 64)));

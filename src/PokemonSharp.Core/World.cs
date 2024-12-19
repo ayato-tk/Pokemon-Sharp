@@ -27,7 +27,7 @@ public abstract class World
     protected abstract void InitializeEntities();
     
     
-    public virtual void Update(GameTime gameTime)
+    public void Update(GameTime gameTime)
     {
         foreach (var system in Systems)
         {
@@ -35,7 +35,7 @@ public abstract class World
         }
     }
 
-    public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+    public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
         foreach (var system in Systems)
         {
