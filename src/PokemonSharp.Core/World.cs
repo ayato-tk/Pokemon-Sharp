@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using PokemonSharp.Core.Managers;
+using PokemonSharp.Core.Entities;
 using PokemonSharp.Core.Systems;
 using PokemonSharp.Core.Systems.Entity.Interfaces;
 
@@ -9,13 +9,13 @@ namespace PokemonSharp.Core;
 
 public abstract class World
 {
-    protected readonly EntityManager EntityManager;
+
 
     protected readonly List<ISystem> Systems;
 
     protected World()
     {
-        EntityManager = new EntityManager();
+        
         Systems = [];
         
         InitializeSystems();

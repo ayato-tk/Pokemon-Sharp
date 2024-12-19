@@ -2,12 +2,11 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using PokemonSharp.Core.Components.Entity;
-using PokemonSharp.Core.Managers;
 using PokemonSharp.Core.Systems.Entity.Interfaces;
 
 namespace PokemonSharp.Core.Systems.Entity;
 
-public class RenderSystem(EntityManager entityManager, ContentManager contentManager) : IRenderSystem
+public class RenderSystem(Entities.Entity entityManager, ContentManager contentManager) : IRenderSystem
 {
     public void Update(GameTime gameTime)
     {
