@@ -6,7 +6,7 @@ using PokemonSharp.Core.Systems.Entity.Interfaces;
 
 namespace PokemonSharp.Core.Systems.Entity;
 
-public class RenderSystem(Entities.Entity entityManager, ContentManager contentManager) : IRenderSystem
+public class RenderSystem(Entities.Entity entity, ContentManager contentManager) : IRenderSystem
 {
     public void Update(GameTime gameTime)
     {
@@ -14,7 +14,7 @@ public class RenderSystem(Entities.Entity entityManager, ContentManager contentM
 
     public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        foreach (var (entityId, components) in entityManager.GetEntitiesWithComponents(typeof(PositionComponent),
+        foreach (var (entityId, components) in entity.GetEntitiesWithComponents(typeof(PositionComponent),
                      typeof(SpriteComponent)))
         {
             if (!components.TryGetValue(typeof(PositionComponent), out var positionObj) ||

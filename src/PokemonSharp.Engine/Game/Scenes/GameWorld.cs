@@ -31,10 +31,10 @@ public class GameWorld(ContentManager contentManager) : World
     {   
         var npcEntity = _npc1.CreateEntity();
 
-        /*_npc1.AddComponent(npcEntity, new PositionComponent(200, 200));
+        _npc1.AddComponent(npcEntity, new PositionComponent(200, 200));
         _npc1.AddComponent(npcEntity,
-            new SpriteComponent("Sprites\\NPC\\NPC_0\\npc_0.png",
-                new Rectangle(0, 0, 48, 64)));*/
+            new SpriteComponent("Sprites/NPC/NPC_0/npc_0",
+                new Rectangle(0, 0, 48, 64)));
 
 
         var playerEntity = 
