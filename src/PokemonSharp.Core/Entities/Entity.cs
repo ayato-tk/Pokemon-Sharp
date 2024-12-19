@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PokemonSharp.Core.Managers;
+namespace PokemonSharp.Core.Entities;
 
-public class EntityManager
+public abstract class Entity
 {
-    private int _nextEntityId = 0;
+    private static int _nextEntityId = 0;
     private readonly Dictionary<int, Dictionary<Type, object>> _entityComponents = new();
 
     public int CreateEntity()
@@ -27,7 +27,7 @@ public class EntityManager
 
         components[typeof(T)] = component;
     }
-    
+
     public T GetComponent<T>(int entityId) where T : class
     {
         if (!_entityComponents.TryGetValue(entityId, out var components))
@@ -68,7 +68,7 @@ public class EntityManager
                     matchedComponents[componentType] = component;
                 }
             }
-            
+
             if (matchedComponents.Count == componentTypes.Length)
             {
                 yield return (entityId, matchedComponents);

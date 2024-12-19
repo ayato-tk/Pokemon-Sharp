@@ -13,7 +13,6 @@ public class Game1 : Microsoft.Xna.Framework.Game
     
     private World _currentWorld;
     
-    private readonly Trainer _trainer = new Trainer();
     
     public Game1()
     {

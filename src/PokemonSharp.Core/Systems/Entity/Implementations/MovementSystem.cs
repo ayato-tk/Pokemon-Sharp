@@ -3,14 +3,14 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using PokemonSharp.Core.Components.Entity;
-using PokemonSharp.Core.Managers;
+using PokemonSharp.Core.Components.Player;
 
 namespace PokemonSharp.Core.Systems.Entity;
 
 //TODO: Adaptar Sistema para permitir outras entidades além do player andarem
-public class MovementSystem(EntityManager entityManager, float speed) : ISystem
+public class MovementSystem(Entities.Entity entityManager, float speed) : ISystem
 {
-    private readonly EntityManager _entityManager = entityManager;
+    private readonly Entities.Entity _entityManager = entityManager;
 
     private readonly Dictionary<Keys, Vector2> _keyDirectionMap = new()
     {

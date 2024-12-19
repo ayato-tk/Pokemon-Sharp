@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Input;
 
-namespace PokemonSharp.Core.Components.Entity;
+namespace PokemonSharp.Core.Components.Player;
 
 public class InputComponent
 {
@@ -12,20 +12,20 @@ public class InputComponent
         PreviousKeyboardState = CurrentKeyboardState;
         CurrentKeyboardState = Keyboard.GetState();
     }
-    
+
     public bool IsKeyDown(Keys key)
     {
         return CurrentKeyboardState.IsKeyDown(key);
     }
-    
+
     public bool IsKeyPressed(Keys key)
     {
         return CurrentKeyboardState.IsKeyDown(key) && PreviousKeyboardState.IsKeyUp(key);
     }
-    
+
     public bool IsKeyReleased(Keys key)
     {
         return CurrentKeyboardState.IsKeyUp(key) && PreviousKeyboardState.IsKeyDown(key);
     }
-    
+
 }
