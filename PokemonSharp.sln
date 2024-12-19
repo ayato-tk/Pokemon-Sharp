@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{792A1B6A-1F6B-4CDF-8482-ACF61B23E066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Game", "src\PokemonSharp.Game\PokemonSharp.Game.csproj", "{D525F690-29FC-4526-A9FF-1D50D5040B10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Engine", "src\PokemonSharp.Engine\PokemonSharp.Engine.csproj", "{D525F690-29FC-4526-A9FF-1D50D5040B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Domain", "src\PokemonSharp.Domain\PokemonSharp.Domain.csproj", "{A0B34602-B60F-489D-855D-821BF04E071E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonSharp.Core", "src\PokemonSharp.Core\PokemonSharp.Core.csproj", "{A0B34602-B60F-489D-855D-821BF04E071E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
