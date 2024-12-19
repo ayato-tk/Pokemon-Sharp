@@ -13,6 +13,7 @@ public class GameWorld(
     protected override void InitializeSystems()
     {
         Systems.Add(new RenderSystem(EntityManager, contentManager));
+        Systems.Add(new MovementSystem(EntityManager, 100f));
     }
 
     protected override void InitializeEntities()
