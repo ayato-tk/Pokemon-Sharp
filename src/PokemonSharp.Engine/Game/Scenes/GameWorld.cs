@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 using PokemonSharp.Core;
 using PokemonSharp.Core.Components.Entity;
 using PokemonSharp.Core.Components.Player;
@@ -9,13 +10,12 @@ using PokemonSharp.Core.Systems.Entity;
 
 namespace PokemonSharp.Engine.Game.Scenes;
 
-public class GameWorld(ContentManager contentManager) : World
+public class GameWorld(ContentManager contentManager, GraphicsDevice graphicsDevice)
+    : World(contentManager, graphicsDevice, "Maps/Kanto/kanto")
 {
-
     private readonly Trainer _trainer = new();
 
     private readonly NPC _npc1 = new();
-
 
 
     protected override void InitializeSystems()
@@ -28,7 +28,7 @@ public class GameWorld(ContentManager contentManager) : World
     }
 
     protected override void InitializeEntities()
-    {   
+    {
         var npcEntity = _npc1.CreateEntity();
 
         _npc1.AddComponent(npcEntity, new PositionComponent(200, 200));
@@ -37,7 +37,7 @@ public class GameWorld(ContentManager contentManager) : World
                 new Rectangle(0, 0, 48, 64)));
 
 
-        var playerEntity = 
+        var playerEntity =
             _trainer.CreateEntity();
         _trainer.AddComponent(playerEntity, new PositionComponent(100, 200));
         _trainer.AddComponent(playerEntity, new InputComponent());

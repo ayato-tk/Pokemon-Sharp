@@ -10,8 +10,15 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:MonoGame.Extended.Content.Pipeline.dll
+/reference:MonoGame.Extended.dll
 
 #---------------------------------- Content ---------------------------------#
+
+#begin Maps/Kanto/kanto.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:Maps/Kanto/kanto.tmx
 
 #begin Sprites/NPC/NPC_0/npc_0.png
 /importer:TextureImporter

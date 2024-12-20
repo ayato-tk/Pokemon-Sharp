@@ -1,0 +1,78 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Kanto/kanto.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "Kanto/TileSet",
+        "Kanto"
+    ],
+    "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "Kanto/TileSet/kanto_tileset01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 5.5
+        },
+        "Kanto/TileSet/pokemon_firered_tileset_builds.tsx": {
+            "scaleInDock": 8,
+            "scaleInEditor": 5.5
+        },
+        "Kanto/TileSet/pokemon_firered_tileset_builds_01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "Kanto/TileSet/pokemon_tileset___fire_red_leaf_green___outdoors_c_by_ozotwo_d7dmotm.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 4
+        },
+        "Kanto/kanto.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 993.25,
+                "y": 4630.25
+            }
+        },
+        "Kanto/kanto.tmx#pokemon_firered_tileset_builds": {
+            "scaleInDock": 1
+        },
+        "kanto.tmx": {
+            "scale": 0.015625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 224,
+                "y": 26784
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/lucas/Desktop/PokemonSharp/src/PokemonSharp.Engine/Content/Maps/Kanto/TileSet",
+    "map.height": 640,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 10,
+    "map.tileWidth": 10,
+    "map.width": 6527,
+    "openFiles": [
+        "Kanto/kanto.tmx",
+        "Kanto/TileSet/pokemon_tileset___fire_red_leaf_green___outdoors_c_by_ozotwo_d7dmotm.tsx"
+    ],
+    "project": "GameWorlds.tiled-project",
+    "recentFiles": [
+        "Kanto/TileSet/pokemon_tileset___fire_red_leaf_green___outdoors_c_by_ozotwo_d7dmotm.tsx",
+        "Kanto/kanto.tmx",
+        "Kanto/TileSet/pokemon_firered_tileset_builds.tsx",
+        "Kanto/TileSet/pokemon_firered_tileset_builds_01.tsx",
+        "Kanto/TileSet/kanto_tileset01.tsx",
+        "kanto.tmx"
+    ],
+    "resizeMap.removeObjects": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
