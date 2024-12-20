@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended;
+using MonoGame.Extended.ViewportAdapters;
 using PokemonSharp.Core;
 using PokemonSharp.Core.Entities.Trainer;
 using PokemonSharp.Engine.Game.Scenes;
@@ -12,6 +14,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
     private SpriteBatch _spriteBatch;
     
     private World _currentWorld;
+    private OrthographicCamera _camera;
     
     
     public Game1()
@@ -24,7 +27,10 @@ public class Game1 : Microsoft.Xna.Framework.Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        _currentWorld = new GameWorld(Content, GraphicsDevice);
+        
+        var viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, 800, 600);
+        _camera = new OrthographicCamera(viewportAdapter);
+        _currentWorld = new GameWorld(Content, GraphicsDevice, _camera);
         
         base.Initialize();
     }
@@ -49,13 +55,8 @@ public class Game1 : Microsoft.Xna.Framework.Game
         GraphicsDevice.Clear(Color.Black);
 
         // TODO: Add your drawing code here
-        _spriteBatch.Begin();
-        /*_spriteBatch.Draw(_trainer.Texture, _trainer.Position, Color.White);
+        _spriteBatch.Begin(transformMatrix: _camera.GetViewMatrix());
         
-        var sourceRectangle = new Rectangle(0, 0, 48, 64);
-        
-        _spriteBatch.Draw(_trainer.Texture, new Vector2(500, 100), sourceRectangle, Color.White);*/
-
         _currentWorld.Draw(gameTime, _spriteBatch);
 
         _spriteBatch.End();

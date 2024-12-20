@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended;
 using PokemonSharp.Core;
 using PokemonSharp.Core.Components.Entity;
 using PokemonSharp.Core.Components.Player;
@@ -10,20 +11,19 @@ using PokemonSharp.Core.Systems.Entity;
 
 namespace PokemonSharp.Engine.Game.Scenes;
 
-public class GameWorld(ContentManager contentManager, GraphicsDevice graphicsDevice)
+public class GameWorld(ContentManager contentManager, GraphicsDevice graphicsDevice, OrthographicCamera camera)
     : World(contentManager, graphicsDevice, "Maps/Kanto/kanto")
 {
     private readonly Trainer _trainer = new();
 
     private readonly NPC _npc1 = new();
-
+    
 
     protected override void InitializeSystems()
     {
         Systems.Add(new RenderSystem(_trainer, contentManager));
-        Systems.Add(new MovementSystem(_trainer, 100f));
-
-
+        Systems.Add(new MovementSystem(_trainer, 100f, camera));
+        
         Systems.Add(new RenderSystem(_npc1, contentManager));
     }
 

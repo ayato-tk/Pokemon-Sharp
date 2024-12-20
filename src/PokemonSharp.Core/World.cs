@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Renderers;
-using PokemonSharp.Core.Entities;
 using PokemonSharp.Core.Systems;
 using PokemonSharp.Core.Systems.Entity.Interfaces;
 
@@ -15,7 +14,7 @@ public abstract class World
 {
     protected readonly List<ISystem> Systems;
 
-    protected TiledMap _tiledMap;
+    private TiledMap _tiledMap;
 
     private TiledMapRenderer _tiledMapRenderer;
     
@@ -25,10 +24,12 @@ public abstract class World
     
     private readonly string _mapPath;
 
-    protected World(ContentManager contentManager, GraphicsDevice graphicsDevice, string mapPath)
+    protected World(ContentManager contentManager, 
+        GraphicsDevice graphicsDevice, 
+        string mapPath)
     {
         Systems = [];
-
+        
         _contentManager = contentManager;
         _graphicsDevice = graphicsDevice;
         _mapPath = mapPath;
@@ -59,7 +60,6 @@ public abstract class World
 
     public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        _tiledMapRenderer.Draw();
         foreach (var system in Systems)
         {
             if (system is IRenderSystem renderSystem)
